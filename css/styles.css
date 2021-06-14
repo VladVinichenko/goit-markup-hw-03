@@ -4,12 +4,28 @@
   --focus-colour: #2196f3;
   --main-colour: #212121;
   --seconary-colour: #757575;
+  --background-colour: #2f303a;
+  --footer-link-colour: rgba(255, 255, 255, 0.6);
+  --dark-text-colour: #ffffff;
+  --hero-button-focus-colour: #188ce8;
+  --button-background-colour: #f5f4fa;
+  --primary-font-size: 14px;
+  --seonary-font-size: 16px;
 }
 
 body {
   font-family: var(--main-font);
   color: var(--main-colour);
+  font-size: var(--primary-font-size);
+  letter-spacing: 0.03em;
 }
+
+/*
+address {
+  font-family: var(--main-font);
+  font-style: normal;
+}
+*/
 
 .list {
   list-style: none;
@@ -24,7 +40,6 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 /*========== END COMPONENTS ==========*/
 
@@ -35,7 +50,6 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   text-decoration: none;
 }
 
@@ -54,27 +68,18 @@ body {
 /*========== END LOGO ==========*/
 
 /*========== HEADER ==========*/
-.menu-link {
+.menu-link,
+.menu-contact {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-colour);
 }
 
 .menu-link:hover,
-.menu-link:focus {
-  color: #2196f3;
-}
-
-.menu-contact {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--seconary-colour);
-}
-
+.menu-link:focus,
+.menu-link:active,
+.current-link,
 .menu-contact:hover,
 .menu-contact:focus {
   color: var(--focus-colour);
@@ -84,42 +89,41 @@ body {
 
 /*========== FOOTER ==========*/
 .footer {
-  background-color: #2f303a;
+  background-color: var(--background-colour);
+}
+
+.address-footer-list-title-link-map,
+.address-footer-list-title-link {
+  font-style: inherit; /*italic всё равно остался. В 3 домашке глобальный address поставлю*/
+  line-height: 1.71;
 }
 
 .address-footer-list-title-link-map {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: #ffffff;
+  color: var(--dark-text-colour);
 }
 
 .address-footer-list-title-link {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-link-colour);
 }
 /*========== END FOOTER ==========*/
 
 /*========== HERO ==========*/
 .hero {
-  background-color: #2f303a;
+  background-color: var(--background-colour);
+}
+
+.hero-title,
+.hero-button {
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--dark-text-colour);
 }
 
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  color: #ffffff;
 }
 
 .hero-button {
@@ -128,32 +132,25 @@ body {
   line-height: 1.88;
   display: flex;
   align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
+  background-color: var(--focus-colour);
   cursor: pointer;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #188ce8;
+  background-color: var(--hero-button-focus-colour);
 }
 
 /*========== END HERO ==========*/
 
 /*========== FEATURES ==========*/
 .features-text {
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--seconary-colour);
 }
 
 .features-title {
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -164,20 +161,19 @@ body {
 /*========== END ABOUT ==========*/
 
 /*========== COMMAND ==========*/
+.command-list-item-title,
+.command-list-item-text {
+  font-size: var(--seonary-font-size);
+  text-align: center;
+}
+
 .command-list-item-title {
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .command-list-item-text {
-  font-size: 16px;
   line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-
   color: var(--seconary-colour);
 }
 /*========== END COMMAND ==========*/
@@ -185,17 +181,16 @@ body {
 /*========== PORTFOLIO BUTTON ==========*/
 .portfolio-button {
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--seonary-font-size);
   line-height: 1.63;
   text-align: center;
-  letter-spacing: 0.03em;
-  background-color: #f5f4fa;
+  background-color: var(--button-background-colour);
   cursor: pointer;
 }
 
 .portfolio-button:hover,
 .portfolio-button:focus {
-  color: #ffffff;
+  color: var(--dark-text-colour);
   background-color: var(--focus-colour);
 }
 /*========== END PORTFOLIO BUTTON ==========*/
@@ -208,9 +203,8 @@ body {
 }
 
 .portfolio-list-item-text {
-  font-size: 16px;
+  font-size: var(--seonary-font-size);
   line-height: 1.88;
-  letter-spacing: 0.03em;
 
   color: var(--seconary-colour);
 }
